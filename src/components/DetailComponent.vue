@@ -6,7 +6,6 @@
         <p>Created_at: {{detail.created_at}}</p>
         <p>Updated_at: {{detail.updated_at}}</p>
         <p>Status: {{detail.status}}</p>
-        <button @click="changeStatus(detail.id)">Change status</button>
     </div>
 </template>
 <script>
@@ -36,10 +35,7 @@ export default {
         }
     },
     methods: {
-        changeStatus (id) {
-            this.$store.dispatch('changeStatus', id);
-            window.history.length > 1 ? this.$router.go(-1) : this.$router.push('/')
-        }
+       
     }
     
 }

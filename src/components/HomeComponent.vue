@@ -1,21 +1,21 @@
 <template>
   <div class="hello">
-      <button @click="create">Tạo mới</button>
+      <el-button type="primary" @click="create">Thêm hoạt động</el-button>
       <div class="display">
-      <Todo/>
+      <todo-component></todo-component>
       <Done/>
       </div>
   </div>
 </template>
 
 <script>
-import Todo from './TodoComponent.vue'
+import TodoComponent from './TodoComponent.vue'
 import Done from './DoneComponent.vue'
 
 export default {
   name: 'Home',
   components: {
-    Todo,
+    TodoComponent,
     Done
   },
   methods: {
@@ -30,7 +30,7 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
   div.display {
-    margin-top: 50px;
+    margin-top: 20px;
     display: flex;
   }
 /* h3 {
